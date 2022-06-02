@@ -4,6 +4,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import model.dao.DaoFactory;
+import model.dao.SellerDao;
 import model.entities.Department;
 import model.entities.Seller;
 
@@ -13,6 +15,8 @@ public class Program {
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		Date date = sdf.parse("07/11/2003");
+		
+		SellerDao sellerDao = DaoFactory.createSellerDao();
 		
 		Department dep = new Department(5, "livros");
 		Seller seller = new Seller(5, "carlos", "carlos@gmail.com", date, 5000.0, dep);
