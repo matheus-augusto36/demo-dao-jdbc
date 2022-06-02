@@ -17,6 +17,8 @@ public class Program {
 		Date date = sdf.parse("07/11/2003");
 		
 		SellerDao sellerDao = DaoFactory.createSellerDao();
+		
+		System.out.println("=== TEST 1: seller findById ===");
 		Seller seller = sellerDao.findById(2);
 
 		System.out.println(seller);
