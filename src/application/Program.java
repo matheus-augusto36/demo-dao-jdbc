@@ -17,13 +17,9 @@ public class Program {
 		Date date = sdf.parse("07/11/2003");
 		
 		SellerDao sellerDao = DaoFactory.createSellerDao();
-		
-		Department dep = new Department(5, "livros");
-		Seller seller = new Seller(5, "carlos", "carlos@gmail.com", date, 5000.0, dep);
-		
-		System.out.println(dep);
-		System.out.println(seller);
+		Seller seller = sellerDao.findById(2);
 
+		System.out.println(seller);
 	}
 
 }
